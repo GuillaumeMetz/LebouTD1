@@ -1,12 +1,29 @@
 <html>
 <head>
+    <script src="https://unpkg.com/aframe-teleport-controls/dist/aframe-teleport-controls.min.js"></script>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 <body>
 <a-scene>
-    <a-assets>
-        <img id="sky" src="img/Venise.jpg">
-    </a-assets>
+    <a-entity id="left-hand"
+              brush
+              paint-controls="hand: left"
+              ui
+              teleport-controls>
+    </a-entity>
+    <a-entity id="right-hand"
+              brush
+              paint-controls="hand: right"
+              ui
+              teleport-controls>
+    </a-entity>
+        <a-assets>
+            <img id="ground" src="img/grass.jpg">
+            <img id="sky" src="img/skybis.jpg">
+        </a-assets>
+
+        <!-- Textured plane parallel to ground. -->
+        <a-plane src="#ground" height="100" width="100" rotation="-90 0 0" material="repeat: 50 50"></a-plane>
     <a-sky src="#sky"></a-sky>
 </a-scene>
 </body>
