@@ -11,6 +11,7 @@
 <a-scene physics>
     <a-assets>
         <img id="ground" src="img/grass.jpg">
+        <img id="background" src="img/beach.jpg">
     </a-assets>
     <a-entity>
         <a-entity sphere-collider="objects: a-box" mixin="physics-hands" super-hands hand-controls="hand: left"></a-entity>
@@ -26,7 +27,8 @@
         </a-entity>
     </a-entity>
     <!-- hover & drag-drop won't have any obvious effect without some additional event handlers or components. See the examples page for more -->
-    <a-plane static-body src="#ground" height="100" width="100" rotation="-90 0 0" repeat="50 50 " material="" geometry=""></a-plane>
+    <a-plane static-body src="#ground" height="1" width="100" rotation="-90 0 0" repeat="50 50 " material="" geometry=""></a-plane>
     <a-box hoverable grabbable stretchable draggable droppable color="blue" position="0 2 0"></a-box>
+    <a-sky src="#background"></a-sky>
 </a-scene>
 </body>
