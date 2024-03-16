@@ -1,9 +1,7 @@
 <head>
     <title>Most Basic Super-Hands Example</title>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.misc.min.js"></script>
     <script src="https://unpkg.com/super-hands@^3.0.3/dist/super-hands.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.1.0/dist/aframe-physics-system.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@^4.1.1/dist/aframe-event-set-component.min.js"></script>
 </head>
 
@@ -30,9 +28,6 @@
     <a-plane static-body src="#ground" height="80" width="80" rotation="-90 0 0" repeat="50 50 " material="" geometry=""></a-plane>
     <a-box hoverable grabbable stretchable draggable droppable color="#ffb602" position="0 2 -1" id="movingbox"></a-box>
     <a-box color="#f00" depth="0.2" height="0.2" width="0.2" position=" -0.5 1 -0.5" event-set__click="_target: #movingbox; color: #f00"></a-box>
-    <a-box color="#0f0" depth="0.2" height="0.2" width="0.2" position=" 0 1 -0.5" event-set__click="_target: #movingbox; color: #0f0"></a-box>
-    <!-- Faire un background d'une place avec une voiture qui tourne autour de nous -->
-    <a-box color="#00f" depth="0.2" height="0.2" width="0.2" position=" 0.5 1 -0.5" event-set__click="_target: #movingbox; color: #00f"></a-box>
     <a-sky src="#background"></a-sky>
 </a-scene>
 </body>
